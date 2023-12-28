@@ -20,6 +20,7 @@ import {
   PopoverFooter,
   Tooltip,
   HStack,
+  Image
 } from '@chakra-ui/react'
 import { ExternalLinkIcon, SmallCloseIcon, CheckIcon } from '@chakra-ui/icons'
 import { DiGithubBadge } from 'react-icons/di'
@@ -60,6 +61,7 @@ const CodeSandboxButton = () => {
               rightIcon={<ExternalLinkIcon path="" />}
               variant="ghost"
               size="xs"
+              color="black"
             >
               Export code
             </Button>
@@ -121,7 +123,7 @@ const Header = () => {
     <DarkMode>
       <Flex
         justifyContent="space-between"
-        bg="#1a202c"
+        bg="#ffffff"
         as="header"
         height="3rem"
         px="1rem"
@@ -129,7 +131,7 @@ const Header = () => {
         <Flex
           width="14rem"
           height="100%"
-          backgroundColor="#1a202c"
+          backgroundColor="#ffffff"
           color="white"
           as="a"
           fontSize="xl"
@@ -137,8 +139,9 @@ const Header = () => {
           alignItems="center"
           aria-label="Chakra UI, Back to homepage"
         >
-          <Box fontSize="2xl" as={AiFillThunderbolt} mr={1} color="teal.100" />{' '}
-          <Box fontWeight="bold">open</Box>chakra
+          {/* <Box fontSize="2xl" as={AiFillThunderbolt} mr={1} color="teal.100" />{' '}
+          <Box fontWeight="bold">open</Box>chakra */}
+          <Image src={"https://gms2-staging-frontend.compat.io/img/Logo-ai.svg"} />
         </Flex>
 
         <Flex flexGrow={1} justifyContent="space-between" alignItems="center">
@@ -156,7 +159,7 @@ const Header = () => {
               >
                 <FormLabel
                   cursor="help"
-                  color="gray.200"
+                  color="black"
                   fontSize="xs"
                   htmlFor="preview"
                   pb={0}
@@ -170,7 +173,7 @@ const Header = () => {
               <LightMode>
                 <Switch
                   isChecked={showLayout}
-                  colorScheme="teal"
+                  colorScheme="blue"
                   size="sm"
                   onChange={() => dispatch.app.toggleBuilderMode()}
                   id="preview"
@@ -180,7 +183,7 @@ const Header = () => {
 
             <FormControl display="flex" flexDirection="row" alignItems="center">
               <FormLabel
-                color="gray.200"
+                color="black"
                 fontSize="xs"
                 mr={2}
                 mb={0}
@@ -203,16 +206,17 @@ const Header = () => {
           </HStack>
 
           <Stack direction="row">
-            <CodeSandboxButton />
+            {/* <CodeSandboxButton /> */}
             <Popover>
               {({ onClose }) => (
-                <>
+                <> 
                   <PopoverTrigger>
                     <Button
                       ml={4}
                       rightIcon={<SmallCloseIcon path="" />}
                       size="xs"
                       variant="ghost"
+                      color="black"
                     >
                       Clear
                     </Button>
@@ -257,7 +261,7 @@ const Header = () => {
           direction="row"
           spacing="2"
         >
-          <Link isExternal href="https://github.com/premieroctet/openchakra">
+          {/* <Link isExternal href="https://github.com/premieroctet/openchakra">
             <Box as={DiGithubBadge} size={32} color="gray.200" />
           </Link>
           <Box lineHeight="shorter" color="white" fontSize="xs">
@@ -265,7 +269,7 @@ const Header = () => {
             <Link isExternal href="https://premieroctet.com" color="teal.100">
               Premier Octet
             </Link>
-          </Box>
+          </Box> */}
         </Stack>
       </Flex>
     </DarkMode>

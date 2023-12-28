@@ -26,10 +26,11 @@ const Menu = () => {
         m={0}
         p={0}
         as="menu"
-        backgroundColor="#2e3748"
+        backgroundColor="#ffffff"
+        color="#9e9e9e"
         width="15rem"
       >
-        <Box p={5} pb={1} position="sticky" w="100%" bgColor="#2e3748" top={0}>
+        <Box p={5} pb={1} position="sticky" w="100%" bgColor="#9e9e9e" top={0}>
           <InputGroup size="sm" mb={4}>
             <Input
               value={searchTerm}
